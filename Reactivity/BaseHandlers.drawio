@@ -1,21 +1,21 @@
-<mxfile host="Electron" modified="2024-07-24T01:04:46.060Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="vodHhTKOfL5wGnBUl0FL" version="21.6.1" type="device">
+<mxfile host="Electron" modified="2024-07-24T09:31:29.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="m2J9x8tborJNFovN4fsi" version="21.6.1" type="device">
   <diagram name="第 1 页" id="eE3fHEXswbHY-f9UicwJ">
-    <mxGraphModel dx="1467" dy="200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="2777" dy="1079" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="02nY0yU2g49zin4ahf_P-1" value="开始" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="480" y="120" width="120" height="40" as="geometry" />
+          <mxGeometry x="280" y="60" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-4" value="BaseHandlers" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=26;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="-1120" y="40" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-5" value="全局属性(默认值)：&lt;br&gt;_isReadonly = false&lt;br&gt;_isShallow = false&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="400" y="240" width="280" height="80" as="geometry" />
+          <mxGeometry x="201" y="265" width="280" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="02nY0yU2g49zin4ahf_P-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="02nY0yU2g49zin4ahf_P-1" target="02nY0yU2g49zin4ahf_P-5" edge="1">
+        <mxCell id="02nY0yU2g49zin4ahf_P-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="IdSoGw8UQ_UYFOGv3OVG-1" target="02nY0yU2g49zin4ahf_P-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="170" y="310" as="sourcePoint" />
+            <mxPoint x="130" y="180" as="sourcePoint" />
             <mxPoint x="220" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -33,7 +33,7 @@
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-19" value="Reactive" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" parent="02nY0yU2g49zin4ahf_P-16" vertex="1" connectable="0">
           <mxGeometry x="-0.0945" relative="1" as="geometry">
-            <mxPoint x="-10" y="4" as="offset" />
+            <mxPoint x="-1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-17" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="02nY0yU2g49zin4ahf_P-15" target="02nY0yU2g49zin4ahf_P-13" edge="1">
@@ -253,7 +253,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-64" value="&lt;b&gt;问题记录：&lt;/b&gt;&lt;br&gt;1. 在获取属性ReactiveFlags.RAW值为啥需要通过比较当前receiver 是否存在于记录对象中？而不是直接返回target对象？为啥需要额外判断原型对象是否相等？&lt;br&gt;&lt;br&gt;2.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="-560" y="120" width="360" height="210" as="geometry" />
+          <mxGeometry x="-560" y="120" width="360" height="360" as="geometry" />
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-65" value="&lt;b&gt;Note：&lt;/b&gt;&lt;br&gt;1. BaseHandlers.ts文件中存在三个类型，分别为BaseReactiveHandler、&lt;br&gt;MutableReactiveHandler、ReadonlyReactiveHandler。&lt;br&gt;&lt;br&gt;2. Reactive对象根据是否深层响应式，分为两种类型Reactive、shallowReactive。&lt;br&gt;&lt;br&gt;3. 记录对象 -&amp;gt; weakMap。【存储target &amp;amp; reactiveProxy】&lt;br&gt;&lt;br&gt;4.&amp;nbsp;arrayInstrumentations 结构 --&amp;gt; Record&amp;lt;string, function&amp;gt; 。包含属性为&lt;br&gt;includes、indexOf、lastIndexOf、push、pop、shift、unshift、splice。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="-1120" y="120" width="520" height="370" as="geometry" />
@@ -496,6 +496,15 @@
             <Array as="points">
               <mxPoint x="1200" y="2940" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdSoGw8UQ_UYFOGv3OVG-1" value="Class BaseReactiveHandler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="200" y="140" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IdSoGw8UQ_UYFOGv3OVG-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="02nY0yU2g49zin4ahf_P-1" target="IdSoGw8UQ_UYFOGv3OVG-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="150" as="sourcePoint" />
+            <mxPoint x="600" y="100" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
