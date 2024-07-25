@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-07-24T09:31:29.335Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="m2J9x8tborJNFovN4fsi" version="21.6.1" type="device">
+<mxfile host="Electron" modified="2024-07-25T08:03:26.426Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="nGDcvInE1Y6bkg_XVeSP" version="21.6.1" type="device">
   <diagram name="第 1 页" id="eE3fHEXswbHY-f9UicwJ">
-    <mxGraphModel dx="2777" dy="1079" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="7199" dy="4045" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -252,7 +252,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="02nY0yU2g49zin4ahf_P-64" value="&lt;b&gt;问题记录：&lt;/b&gt;&lt;br&gt;1. 在获取属性ReactiveFlags.RAW值为啥需要通过比较当前receiver 是否存在于记录对象中？而不是直接返回target对象？为啥需要额外判断原型对象是否相等？&lt;br&gt;&lt;br&gt;2.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
+        <mxCell id="02nY0yU2g49zin4ahf_P-64" value="&lt;b&gt;问题记录：&lt;/b&gt;&lt;br&gt;1. 在获取属性ReactiveFlags.RAW值为啥需要通过比较当前receiver 是否存在于记录对象中？而不是直接返回target对象？为啥需要额外判断原型对象是否相等？&lt;br&gt;&lt;br&gt;2. track函数中为啥需要TrackOpTypes.GET？关联操作只与关联对象（target）&amp;amp; 关联属性（key）产生联系。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="-560" y="120" width="360" height="360" as="geometry" />
         </mxCell>
         <mxCell id="02nY0yU2g49zin4ahf_P-65" value="&lt;b&gt;Note：&lt;/b&gt;&lt;br&gt;1. BaseHandlers.ts文件中存在三个类型，分别为BaseReactiveHandler、&lt;br&gt;MutableReactiveHandler、ReadonlyReactiveHandler。&lt;br&gt;&lt;br&gt;2. Reactive对象根据是否深层响应式，分为两种类型Reactive、shallowReactive。&lt;br&gt;&lt;br&gt;3. 记录对象 -&amp;gt; weakMap。【存储target &amp;amp; reactiveProxy】&lt;br&gt;&lt;br&gt;4.&amp;nbsp;arrayInstrumentations 结构 --&amp;gt; Record&amp;lt;string, function&amp;gt; 。包含属性为&lt;br&gt;includes、indexOf、lastIndexOf、push、pop、shift、unshift、splice。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=16;" parent="1" vertex="1">
@@ -498,13 +498,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="IdSoGw8UQ_UYFOGv3OVG-1" value="Class BaseReactiveHandler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+        <mxCell id="IdSoGw8UQ_UYFOGv3OVG-1" value="Class BaseReactiveHandler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="200" y="140" width="280" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="IdSoGw8UQ_UYFOGv3OVG-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="02nY0yU2g49zin4ahf_P-1" target="IdSoGw8UQ_UYFOGv3OVG-1">
+        <mxCell id="IdSoGw8UQ_UYFOGv3OVG-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="02nY0yU2g49zin4ahf_P-1" target="IdSoGw8UQ_UYFOGv3OVG-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="550" y="150" as="sourcePoint" />
             <mxPoint x="600" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IXHBZJBwBNklXdQCyk9x-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="02nY0yU2g49zin4ahf_P-100" target="02nY0yU2g49zin4ahf_P-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="2560" as="sourcePoint" />
+            <mxPoint x="580" y="2510" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="2940" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
